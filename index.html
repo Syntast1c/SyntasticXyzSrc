@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--siht dedoc namor (proof local, mr popcorn)-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="syntastic.xyz"/>
+    <meta name="url" content="http://syntastic.xyz">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <title>syntastic</title>
+    <link rel="stylesheet" href="style.css">
+    <audio id="backgroundAudio" muted loop>
+        <source src="assets/Music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        console.log("siht dedoc namor (proof local, mr popcorn)")
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById("backgroundAudio");
+
+            // Unmute the audio on user interaction
+            document.addEventListener("click", function() {
+                if (audio.paused) {
+                    audio.play().then(function() {
+                        audio.muted = false;
+                        audio.volume = 0.3; // Set the volume to 0.3 (30%)
+                    });
+                }
+            });
+        });
+
+        function muteAudio() {
+            var audio = document.getElementById("backgroundAudio");
+            audio.muted = !audio.muted;
+
+            // Adjust the button text based on the mute state
+            var muteButton = document.getElementById("muteButton");
+            muteButton.textContent = audio.muted ? "unmute audio" : "mute audio";
+        }
+    </script>
+</head>
+<body>
+    <div class="glass-container">
+        <div class="content">
+            <div class="img">
+                <img src="assets/profilePic.png">
+            </div>
+            <h1>syntastic</h1>
+            <p>webdev - gamer - he/him</p>
+            <button class="buttoncool" id="muteButton" onclick="muteAudio();">mute audio</button>
+            <div class="random">
+            <button class="buttoncool1" onclick="location.href='https://discord.com/users/1058866075095289906';">discord</button>    <button class="buttoncool1" onclick="location.href='https://github.com/syntast1c';">github</button> <button class="buttoncool1" onclick="location.href='https://open.spotify.com/user/31htsy2spvyfjldjyzrlemwvgso4';">spotify</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
